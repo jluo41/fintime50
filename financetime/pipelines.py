@@ -14,13 +14,16 @@ import os
 
 
 class FinancetimePipeline(object):
+    '''
     def __init__(self):
         engine = sdb_connect(os.getcwd())
         create_table(engine)
         Session = sessionmaker(bind = engine)
         self.session = Session()
+    '''
 
     def process_item(self, item, spider):
+        '''
         if isinstance(item, SourceItem):
             source = self.session.query(Source).filter_by(publication_title = item['publication_title']).first()
             if source == None:
@@ -87,5 +90,5 @@ class FinancetimePipeline(object):
                 document.authors.append(author)
 
         self.session.commit()
-
+        '''
         return item

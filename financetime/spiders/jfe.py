@@ -14,13 +14,13 @@ from dateutil.parser import parse
 from financetime.items import DocumentItem, AuthorItem, SourceItem, KeywordItem
 
 
-class DSSSpider(Spider):
-    name = 'dss'
+class JFESpider(Spider):
+    name = 'jfe'
     start_urls = (
-            "http://www.journals.elsevier.com/decision-support-systems/",
+            "http://www.journals.elsevier.com/journal-of-financial-economics/",
             )
     parsed_urls = []
-    base_url = "http://www.sciencedirect.com/science/journal/01679236/"
+    base_url = "http://www.sciencedirect.com/science/journal/0304405X/"
 
     def getdate(self, dates):
         d = {}
@@ -162,6 +162,7 @@ class DSSSpider(Spider):
 
 
             date_page = l.get_xpath([dp_xpath,dp_xpath0])[0].split(', ')
+
             try:
                 l.add_value('publication_date', parse(date_page[-2]))
             except:

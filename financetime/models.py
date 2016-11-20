@@ -20,7 +20,7 @@ def sdb_connect(basedir, name = 'data'):
     return create_engine('sqlite:///'+os.path.join(basedir, name + '.sqlite'))
 
 def mdb_connect():
-    MySQL_DB = 'mysql+mysqlconnector://root:@localhost:3306/new_aisel?charset=utf8'
+    MySQL_DB = 'mysql+mysqlconnector://root:@localhost:3306/financetime?charset=utf8'
     return create_engine(MySQL_DB)
 
 # we get Base from the initializaiton of class declarative_base

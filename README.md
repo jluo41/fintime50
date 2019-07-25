@@ -8,3 +8,5 @@ These journals mainly came from the Finance Time 50 Lists.
 A well-developed crawler scraped the data from various websites, processed the data into the structural format and stored them in a relational database. 
 
 Some basic Natural Language Processing tasks were conducted.
+
+This repository may be deprecated.
